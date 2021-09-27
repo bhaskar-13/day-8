@@ -1,0 +1,15 @@
+class Person {
+    constructor(name,age,profile,city,state,pincode,company)
+    {
+        this.name=name;
+        this.age-age;
+        this.profile=profile;
+        this.city=city;
+        this.state=state;
+        this.pincode=pincode;
+        this.company=company;
+    }
+}
+
+let bhaskar=new Person("Bhaskar",25,"Full Stack Developer","portblair","TamilNadu","744112","Dun & Brad Street");
+console.log(bhaskar);
