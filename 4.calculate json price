@@ -1,0 +1,58 @@
+let uber1=[];
+let uber2=[];
+class uber{
+    constructor(startPoint,endPoint,additionalPickUpTime,distance)
+    {
+          this.startPoint=startPoint;
+          this.endPoint=endPoint;
+          this.additionalPickUpTime=additionalPickUpTime;
+          this.distance=distance;     
+    }
+
+    uberGo(arr1)
+    {
+
+       for(let i=0;i<arr1.length;i++)
+       { 
+           let d=arr1[i].distance;   
+           if(arr1[i].additionalPickUpTime>=5)
+           {
+              uber1.push(d*20*50);
+           }
+           else{
+               uber1.push(d*20);
+           }
+        }
+
+        return uber1;
+
+    }
+
+    uberXl(arr2)
+    
+    {
+        for(let i=0;i<arr2.length;i++)
+       { 
+           let d=arr2[i].distance;   
+           if(arr2[i].additionalPickUpTime>=5)
+           {
+              uber2.push(d*30*80);
+           }
+           else{
+               uber2.push(d*30);
+           }
+        }
+
+        return uber2;
+
+    }
+
+    
+}
+let obj=new uber();
+let bhaskar=new uber("Brookshabad","Aberdeen Bazar",0,20);
+let paresh=new uber("vadapalani","koyambedu",5,50);
+let arun=new uber("neivali","chennai",6,50);
+let arr=[bhaskar,arun,paresh];
+console.log(obj.uberGo(arr));
+console.log(obj.uberXl(arr));
