@@ -1,0 +1,29 @@
+let arr1=[];
+class Movie  {
+    constructor(title,studio,rating="PG")
+    {
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating;
+
+    }
+
+  getPG(movies)
+  {
+     for( let i=0;i<movies.length;i++)
+     {
+         if(movies[i].rating==="PG13")
+         {
+           arr1.push(movies[i].title);
+         }
+     }
+    return arr1;
+  }
+}
+
+let instance=new Movie("Casino Royale","Eon Production","PG13");
+let movie1=new Movie("Ayan","Sun Pictures","PG");
+let movie2=new Movie("Theri","AVM","PG13");
+let movie3=new Movie("Robot","Sun Pictures","PG");
+let arr=[instance,movie1,movie2,movie3];
+console.log(instance.getPG(arr));
